@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+  /* color: #999999; */
+  /* background-color: black; */
+	word-wrap:break-word;
+	color: white;
+	background: linear-gradient(to bottom,black,#8ad3f1)
+}
+
+p
+{
+	margin: 0 0 10px;
+}
+
+ul
+{
+	list-style: none;
+}
+.jumbotron
+{
+	background-color:transparent;
+	color: rgba(255,255,255,1);
+}
+
+#help
+{
+	font: normal 75px/1 "Monoton", Helvetica, sans-serif;
+	color:white;
+}
+h1
+{
+	font: normal 50px/1 "Monoton", Helvetica, sans-serif;
+	color: rgba(255,255,255,1);
+}
+h2
+{
+	font: normal 20px/1 "Monoton", Helvetica, sans-serif;
+	color: rgba(255,255,255,1);
+}
+
+
