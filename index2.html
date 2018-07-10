@@ -35,13 +35,22 @@
     </div>  
 
     <div class="pages" id="login-screen">
-        <!-- login -->
+        <h1 class="text-center">Sign in</h1>
+        <h2 class="text-center">to save your scores!</h2>
+        <div class="d-flex justify-content-center" id="login-btns">
+            <button class="btn" id="fb-login" onclick="FB.login();"><img src="images/f-ogo_RGB_HEX-58.svg" id="fb-logo">Sign in</button>
+            <div id="my-signin2"></div>
+        </div>
+        <h2 class="text-center">Or</h2>
+        <div class="d-flex justify-content-center">
+            <button class="btn" id="play-anon">Play Anonymously</button>
+        </div>
     </div>
 
     <div class="pages" id="help-screen">
         <div class="info-text">
             
-            <h1 class="text-center">Instructions</h1>
+            <h1 class="text-center intro-header">Instructions</h1>
 
             <h2 class="help">Game Play:</h2>	
             <p>Use the arrow keys to move the young lady from left to right. You should avoid being struck by the dropping babies.</p>
@@ -64,8 +73,94 @@
     </div>
 
     <div class="pages" id="game-screen">
+        <div id="log-out">
+            <button class="btn btn-secondary" id='log-out-button' onclick="FB.logout(); signOut();">Log Out</button>
+        </div>
+
         <div id="game"></div>
     </div>
+
+
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '1876746062390308',
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+            version    : 'v3.0'
+          });
+            
+          FB.AppEvents.logPageView(); 
+          
+          FB.getLoginStatus(function(response) {
+              statusChangeCallback(response);
+          });  
+
+          FB.Event.subscribe("auth.login", function(response) {
+              console.log("login button");
+              statusChangeCallback(response);
+          });
+
+          FB.Event.subscribe("auth.logout", function(response) {
+              console.log("logout button");
+              localStorage.removeItem("userID");
+              localStorage.removeItem("userName");
+              showTitlePage();
+          });
+            
+        };
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js"; 
+           fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    
+    <script>
+        function onSuccess(googleUser) {
+            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        
+            var profile = googleUser.getBasicProfile();
+            localStorage.setItem("userID", profile.getId());
+            localStorage.setItem("userName", profile.getGivenName());
+            localStorage.setItem("playAnon", false);
+            
+            showInstructions();
+        }
+
+        function onFailure(error) {
+            console.log(error);
+        }
+
+        function renderButton() {
+            gapi.signin2.render('my-signin2', {
+                'scope': 'profile email',
+                'width': 200,
+                'height': 50,
+                'longtitle': false,
+                'theme': 'light',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+            });
+        }
+
+      function signOut() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User signed out.');
+          });
+
+          localStorage.removeItem("userID");
+          localStorage.removeItem("userName");
+          showTitlePage();
+      }
+    </script>
     
 
 
