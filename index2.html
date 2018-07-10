@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="987825665363-uls95vm75d2than615g6nf06gpj8o62e.apps.googleusercontent.com">
+
+    <title>Knocked Up</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="pages" id="intro-screen">      
+        <div class="animate six">
+            <span>K</span>
+            <span>N</span>
+            <span>O</span>
+            <span>C</span>
+            <span>K</span>
+            <span>E</span>
+            <span>D</span>  
+            <span>&nbsp;</span>
+            <span>U</span>
+            <span>P</span>  
+            <br><br>
+            <span id="intro-continue"><i class="fas fa-chevron-down"></i></span>          
+        </div>
+    </div>  
+
+    <div class="pages" id="login-screen">
+        <!-- login -->
+    </div>
+
+    <div class="pages" id="help-screen">
+        <div class="info-text">
+            
+            <h1 class="text-center">Instructions</h1>
+
+            <h2 class="help">Game Play:</h2>	
+            <p>Use the arrow keys to move the young lady from left to right. You should avoid being struck by the dropping babies.</p>
+
+            <br><br>
+
+            <h2 class="help">Scoring:</h2>	
+            <p>Receive a point for each baby you avoid.</p>
+
+            <br><br>
+
+            <h2 class="help">Losing:</h2>	
+            <p>Each time a baby falls into your arms, you lose a life.</p>
+
+            <br><br>
+
+            <h2 class="help text-center" id="info-continue">Play</h2>
+
+        </div>
+    </div>
+
+    <div class="pages" id="game-screen">
+        <div id="game"></div>
+    </div>
+    
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="firebase.js"></script>
+    <script src="apis.js"></script>
+    <script src="game.js"></script>
+    <script src="intro.js"></script>
+</body>
+</html>
