@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Roboto');
+
+
+body {
+	margin: 0;
+    padding: 0;
+	background: linear-gradient(to bottom, #021142, #8ad3f1)
+}
+
+.pages {
+	width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 10vh 10vw;
+    margin: 0;
+}
+
+h1 {
+	font: normal 65px/1 "Monoton", cursive;
+    color: rgba(255,255,255,1);
+}
+
+h2 {
+	font: normal 40px/1 "Monoton", cursive;
+	color:white;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+	color: white;
+}
+
+
+/* Help Screen */
+.pages#help-screen {
+    background: linear-gradient(to bottom, #4e8eb8, #8ad3f1);
+}
+
+
+
+/* Login Screen */
+.pages#login-screen {
+    background: linear-gradient(to bottom, #284579, #4e8eb8);
+}
+
+#login-btns {
+    margin: 4em;
+}
+
+#fb-login {
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    color: #757575;
+    padding-left: 50px;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.25);
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+#fb-logo {
+    height: 30px;
+    margin-right: 10px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+#play-anon {
+    margin: 4em;
+    height: 50px;
+    width: 200px;
+    border-radius: 2px;
+    background-color: white;
+    color: #757575;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.25);
+}
+
+
+/* Game Screen */
+.pages#game-screen {
+    background-color: #8ad3f1;
+    background-image: url(images/Cityscape.png);
+    background-size: contain;
+    padding: 0;
+}
+
+
+
+/* Intro Screen */
+.pages#intro-screen {
+    background: linear-gradient(to bottom, #021142, #284579);
+    padding-top: 8vh;
+}
+
+.intro-header {
+    margin-bottom: 1em;
+}
+
+.animate {
+	font-size: 50px;
+	text-align: center;
+	padding: 0 0 200px;	
+	margin: 100px 0 0;
+}
+
+.animate span {
+	display: inline-block;
+}
+
+.animate span:nth-of-type(2) {
+	animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+	animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+	animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+	animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+	animation-delay: .25s;
+}
+.animate span:nth-of-type(7) {
+	animation-delay: .3s;
+}
+.animate span:nth-of-type(8) {
+	animation-delay: .35s;
+}
+.animate span:nth-of-type(9) {
+	animation-delay: .4s;
+}
+.animate span:nth-of-type(10) {
+	animation-delay: .45s;
+}
+.animate span:nth-of-type(11) {
+	animation-delay: .5s;
+}
+
+.six span {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 125px/1 "Monoton", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 10px rgb(255,255,255) , 
+			   0 0 20px rgb(255,255,255) , 
+			   0 0 30px rgb(255,255,255) , 
+			   0 0 40px rgb(255,17,119) , 
+			   0 0 70px rgb(255,17,119) , 
+			   0 0 80px rgb(255,17,119) , 
+			   0 0 100px rgb(255,17,119) , 
+			   0 0 150px rgb(255,17,119) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transform: rotate(-180deg) translate(150px, 0);
+  animation: twister .5s forwards; 
+}
+
+@keyframes twister {
+	100% {
+		transform: rotate(0deg) translate(0);
+	}
+}

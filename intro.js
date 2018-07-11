@@ -1,5 +1,5 @@
 function blinker() {
-	$('.container').fadeOut(500);
-	$('.container').fadeIn(500);
+	$('.animate').fadeOut(2000);
+	$('.animate').fadeIn(2000);
 }
-setInterval(blinker, 1000);
+setInterval(blinker, 4000);
