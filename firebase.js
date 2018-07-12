@@ -74,9 +74,6 @@ $(document).ready(function(){
     
       if (score > highScore) {
     
-        // Alert
-        alert("You dodged mad babies!!! You have the high score!!!");
-    
         // Save the new score in Firebase. This will cause our "value" callback above to fire and update
         // the UI.
         database.ref().push({
@@ -91,10 +88,5 @@ $(document).ready(function(){
         console.log(score);
       }
     
-      else {
-    
-        // Alert
-        alert("You got knocked up!!!");
-      };  
     });
     
