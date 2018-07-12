@@ -4,7 +4,7 @@
 body {
 	margin: 0;
     padding: 0;
-	background: linear-gradient(to bottom, #021142, #8ad3f1)
+	/* background: linear-gradient(to bottom, #021142, #8ad3f1) */
 }
 
 .pages {
@@ -35,6 +35,11 @@ p {
 /* Help Screen */
 .pages#help-screen {
     background: linear-gradient(to bottom, #4e8eb8, #8ad3f1);
+    padding-top: 8vh;
+}
+
+.help-header {
+    margin-bottom: .8em;
 }
 
 
@@ -84,9 +89,22 @@ p {
 /* Game Screen */
 .pages#game-screen {
     background-color: #8ad3f1;
-    background-image: url(images/Cityscape.png);
+    /* background-image: url(images/Cityscape.png);
     background-size: contain;
+    background-repeat: no-repeat; */
     padding: 0;
+    margin: 0;
+}
+
+#log-out-button {
+    margin: .5em;
+    height: 50px;
+    width: 200px;
+    border-radius: 2px;
+    background-color: white;
+    color: #757575;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.25);
 }
 
 
@@ -94,11 +112,6 @@ p {
 /* Intro Screen */
 .pages#intro-screen {
     background: linear-gradient(to bottom, #021142, #284579);
-    padding-top: 8vh;
-}
-
-.intro-header {
-    margin-bottom: 1em;
 }
 
 .animate {

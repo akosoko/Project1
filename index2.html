@@ -26,7 +26,7 @@
             <span>K</span>
             <span>E</span>
             <span>D</span>  
-            <span>&nbsp;</span>
+            <br>
             <span>U</span>
             <span>P</span>  
             <br><br>
@@ -50,7 +50,7 @@
     <div class="pages" id="help-screen">
         <div class="info-text">
             
-            <h1 class="text-center intro-header">Instructions</h1>
+            <h1 class="text-center help-header">Instructions</h1>
 
             <h2 class="help">Game Play:</h2>	
             <p>Use the arrow keys to move the young lady from left to right. You should avoid being struck by the dropping babies.</p>
@@ -73,11 +73,11 @@
     </div>
 
     <div class="pages" id="game-screen">
-        <div id="log-out">
+        <div id="log-out" class="float-right">
             <button class="btn btn-secondary" id='log-out-button' onclick="FB.logout(); signOut();">Log Out</button>
         </div>
 
-        <div id="game"></div>
+        <div id="game-div"></div>
     </div>
 
 
@@ -160,8 +160,7 @@
           localStorage.removeItem("userName");
           showTitlePage();
       }
-    </script>
-    
+    </script> 
 
 
     <script
@@ -169,10 +168,11 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
     </script>
+    <script src="phaser.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script src="firebase.js"></script>
     <script src="apis.js"></script>
     <script src="game.js"></script>
+    <script src="firebase.js"></script>
     <script src="intro.js"></script>
 </body>
 </html>
