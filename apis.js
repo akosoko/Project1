@@ -28,6 +28,7 @@ function hideAll() {
     $("#login-screen").hide();
     $("#help-screen").hide();
     $("#game-screen").hide();
+    $("#scoring").hide();
 }
 
 function showTitlePage() {
@@ -35,6 +36,7 @@ function showTitlePage() {
     $("#login-screen").hide();
     $("#help-screen").hide();
     $("#game-screen").hide();
+    $("#scoring").hide();
 }
 
 function showLoginBtns() {
@@ -50,6 +52,7 @@ function showLoginBtns() {
 
     $("#help-screen").hide();
     $("#game-screen").hide();
+    $("#scoring").hide();
 }
 
 function showInstructions() {
@@ -66,6 +69,7 @@ function showInstructions() {
     $("#intro-screen").hide();
     $("#game-screen").hide();
     // localStorage.setItem("instructionsSeen", true);
+    $("#scoring").hide();
 }
 
 function showGame() {
@@ -81,8 +85,16 @@ function showGame() {
 
     $("#intro-screen").hide();
     $("#login-screen").hide();
+    $("#scoring").hide();
 }
 
+function showScoring() {
+    $("#intro-screen").hide();
+    $("#login-screen").hide();
+    $("#help-screen").hide();
+    $("#game-screen").hide();
+    $("#scoring").show();
+}
 
 // Display Functions
 hideAll();

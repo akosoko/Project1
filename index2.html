@@ -73,6 +73,10 @@
     </div>
 
     <div class="pages" id="game-screen">
+            <div id="highscores" class="float-left">
+                    <button class="btn btn-secondary" id='scoring-button' onclick="showScoring();">See High Score</button>
+                </div>
+        
         <div id="log-out" class="float-right">
             <button class="btn btn-secondary" id='log-out-button' onclick="FB.logout(); signOut();">Log Out</button>
         </div>
@@ -80,6 +84,25 @@
         <div id="game-div"></div>
     </div>
 
+    <div class="pages" id="scoring">
+            <div id="backToGame" class="float-left">
+                    <button class="btn btn-secondary" id='scoring-button' onclick="showGame();">Back to Game</button>
+                </div>
+        <div class="info-text">
+                <h1 class="text-center help-header score-head">High Score</h1>
+            <table class="text-center" style="width:80%">
+                <tr class="text-center">
+                  <th class="text-center score-head">Name</th>
+                  <th class="text-center score-head">Score</th> 
+                  
+                </tr>
+                <tr>
+                  <td><span class="text-center" id="high-user"></span></td>
+                  <td><span class="text-center" id="high-score"></span></td> 
+                </tr>
+              </table>
+        </div>
+    </div>
 
     <script>
         window.fbAsyncInit = function() {
